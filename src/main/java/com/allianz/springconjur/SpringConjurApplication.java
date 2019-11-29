@@ -1,12 +1,9 @@
 package com.allianz.springconjur;
 
-import com.allianz.springconjur.conjur.ConjurController;
+import com.allianz.springconjur.controller.ConjurController;
 import org.springframework.boot.Banner;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 public class SpringConjurApplication  {
@@ -16,8 +13,12 @@ public class SpringConjurApplication  {
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
 
+        System.out.println("trying to fetch the secret key for you...");
+
         ConjurController conjurController = new ConjurController();
-        System.out.println("Spring Conjur Application Secret >>"+conjurController.retrieveSecret());
+        System.out.println("Spring Conjur Secret key >> "+conjurController.retrieveSecret());
+
+        System.out.println("done fetching your secret key..");
     }
 
 //    @Override
