@@ -11,7 +11,7 @@ public class ConjurController {
     public ConjurController(){
         setupEnv();
         System.out.println("TRYING TO INITIALIZE THE CONJUR OBJECT");
-        conjur = new Conjur("Leonardo@CustomPolicy","20qnmk9sr2bma38zxmd21r9x86v1dcjbb61w768ys3ekh2y22p6w9jm");
+        conjur = new Conjur("Leonardo@CustomPolicy","1p16srg266q9bg38pept1sby97e2xdbde120txpq92rpxhcz1dbvf5m");
         System.out.println("FINISH INITIALIZED THE CONJUR OBJECT");
         mySecretVar = "";
 
